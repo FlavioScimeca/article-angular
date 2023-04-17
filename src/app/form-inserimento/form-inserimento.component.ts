@@ -22,6 +22,7 @@ export class FormInserimentoComponent {
       this.newArticle.emit(new Article(this.title, this.description));
       this.title = null;
       this.description = null;
+      this.alert = null;
     }
   }
 }
