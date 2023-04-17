@@ -1,0 +1,22 @@
+<p class="text-center fs-4">Lista commenti</p>
+
+<div
+  *ngIf="articles.length != 0; else emptylist"
+  class="container border border-1"
+>
+  <div class="row">
+    <div *ngFor="let article of articles" class="col-md-10 mx-auto my-1 p-1">
+      <app-articolo [article]="article"></app-articolo>
+    </div>
+  </div>
+</div>
+
+<ng-template #emptylist>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <h2 class="text-center">Nessun Commento</h2>
+      </div>
+    </div>
+  </div>
+</ng-template>
